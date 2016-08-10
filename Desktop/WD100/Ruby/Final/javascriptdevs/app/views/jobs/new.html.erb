@@ -1,0 +1,11 @@
+<div class="row">
+<div class="col-md-4">
+<%= simple_form_for @job do |form| %>
+  <p><%= form.input :title, label: "Job title" %></p>
+  <p><%= form.input :company, label: "Your company" %></p>
+  <p><%= form.input :url, label: "Link to job" %><br></p>
+  <%= form.button :submit %>
+<% end %>
+</div>
+</div>
+
