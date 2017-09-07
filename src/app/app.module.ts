@@ -3,6 +3,7 @@ import { NgModule }             from '@angular/core';
 import { FormsModule }          from '@angular/forms'; // NgModel
 
 import { AppComponent } from './app.component';
+import { BeverageDetailComponent } from './beverages/beverage-detail/beverage-detail.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import { AppComponent } from './app.component';
   ],
   declarations: [
     AppComponent,
+    BeverageDetailComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
