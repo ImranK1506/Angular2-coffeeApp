@@ -1,29 +1,28 @@
-import { Component }    from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { Beverage }     from './beverage';
-
-const BEVERAGES: Beverage[] = [
-  { id: 11, name: 'Coffee: Americano' },
-  { id: 12, name: 'Coffee: Cappucino' },
-  { id: 13, name: 'Coffee: Caffé Latte' },
-  { id: 14, name: 'Coffee: Espresso' },
-  { id: 15, name: 'Coffee: Ristretto' },
-  { id: 16, name: 'Tea: Earl grey' },
-  { id: 17, name: 'Tea: Lemon' },
-  { id: 18, name: 'Tea: Ginger' },
-  { id: 19, name: 'Tea: Regular' },
-  { id: 20, name: 'Tea: Green' }
-];
+import { Beverage }         from './beverages/beverage';
+import { BeverageService }  from './beverages/shared/beverage.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [BeverageService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'have a hot beverage';
-  beverages = BEVERAGES;
+  beverages: Beverage[];
   selectedBeverage: Beverage;
+
+  constructor(private beverageService: BeverageService) { };
+
+  getBeverages(): void {
+    this.beverageService.getBeverages().then(beverages => this.beverages = beverages);
+  }
+
+  ngOnInit(): void {
+    this.getBeverages();
+  }
 
   onSelect(beverage: Beverage): void {
     this.selectedBeverage = beverage;

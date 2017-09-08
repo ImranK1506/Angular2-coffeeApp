@@ -1,6 +1,6 @@
 import { Component, Input }    from '@angular/core';
 
-import { Beverage }     from '../../beverage';
+import { Beverage }     from '../beverage';
 
 @Component({
     selector: 'beverage-detail',
