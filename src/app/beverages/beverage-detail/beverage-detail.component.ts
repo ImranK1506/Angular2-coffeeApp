@@ -1,6 +1,6 @@
 import 'rxjs/add/operator/switchMap';
 
-import { Component, Input, OnInit }    from '@angular/core';
+import { Component, OnInit }    from '@angular/core';
 import { ActivatedRoute, ParamMap }    from '@angular/router';
 import { Location }                    from '@angular/common';
 
@@ -9,10 +9,11 @@ import { BeverageService }             from '../shared/beverage.service';
 
 @Component({
   selector: 'beverage-detail',
-  templateUrl: './beverage-detail.component.html'
+  templateUrl: './beverage-detail.component.html',
+  styleUrls: [ './beverage-detail.component.css' ]
 })
 export class BeverageDetailComponent implements OnInit {
-  @Input() beverage: Beverage;
+ beverage: Beverage;
 
   constructor(
         private beverageService:    BeverageService,
