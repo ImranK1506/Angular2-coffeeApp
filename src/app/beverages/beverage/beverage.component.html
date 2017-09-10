@@ -1,13 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nav>
-  <a href="#">Dashboard</a>
-  <a href="#">Menu</a>
-</nav>
 <hr>
   <div style="text-align:center">
-    <h1>
-      Welcome, {{title}}!
-    </h1>
     <img src="./assets/hotbeverage.png">
     <h2>
       My beverages
@@ -20,4 +13,11 @@
       <span class="badge">{{beverage.id}}</span> {{beverage.name}}
     </li>
   </ul>
-  <beverage-detail [beverage]="selectedBeverage"></beverage-detail>
+<div *ngIf="selectedBeverage">
+  <h2>
+    {{selectedBeverage.name | uppercase}} = my beverage
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+  <br>
+  <hr>
+</div>

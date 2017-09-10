@@ -22,7 +22,8 @@ a {
   cursor: pointer;
   cursor: hand;
 }
-button {
+ button {
+  width: 32%;
   font-family: Arial;
   background-color: #eee;
   border: none;
@@ -38,11 +39,10 @@ button:disabled {
   background-color: #eee;
   color: #aaa;
   cursor: auto;
-}
+} 
 
 /* Navigation link styles */
 nav {
-  text-align: center;
   padding-bottom: 1%;
   border-radius: 0.5em;
 }
