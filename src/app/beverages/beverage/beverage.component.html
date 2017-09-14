@@ -5,11 +5,21 @@
       My beverages
     </h2>
   </div>
+  <div>
+    <label>Beverage name:</label> <input #beverageName />
+    <button (click)="add(beverageName.value); beverageName.value=''">
+      Add 
+    </button>
+  </div>
   <ul class="beverages">
     <li *ngFor="let beverage of beverages" 
       [class.selected]="beverage === selectedBeverage"
       (click)="onSelect(beverage)">
-      <span class="badge">{{beverage.id}}</span> {{beverage.name}}
+      <span class="badge">{{beverage.id}}</span> 
+      <span>{{beverage.name}}</span>
+      <!-- Delete button  -->
+      <button class="delete"
+        (click)="delete(beverage); $event.stopPropagation()">X</button>
     </li>
   </ul>
 <div *ngIf="selectedBeverage">

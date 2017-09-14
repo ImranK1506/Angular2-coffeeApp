@@ -1,6 +1,6 @@
 import 'rxjs/add/operator/switchMap';
 
-import { Component, OnInit }    from '@angular/core';
+import { Component, OnInit }           from '@angular/core';
 import { ActivatedRoute, ParamMap }    from '@angular/router';
 import { Location }                    from '@angular/common';
 
@@ -26,6 +26,12 @@ export class BeverageDetailComponent implements OnInit {
      .switchMap((params: ParamMap) => this.beverageService.getBeverage(+params.get('id')))
      .subscribe(beverage => this.beverage = beverage);
  }
+ 
+  save(): void {
+   this.beverageService.update(this.beverage)
+    .then(() => this.goBack());
+ }
+
   goBack(): void {
       this.location.back();
   }

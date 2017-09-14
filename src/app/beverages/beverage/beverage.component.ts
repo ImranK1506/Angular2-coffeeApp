@@ -32,6 +32,25 @@ export class BeveragesComponent implements OnInit {
     this.selectedBeverage = beverage;
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.beverageService.create(name)
+        .then(beverage => {
+            this.beverages.push(beverage);
+            this.selectedBeverage = null;
+        });
+    }
+
+  delete(beverage: Beverage): void {
+    this.beverageService
+        .delete(beverage.id)
+        .then(() => {
+          this.beverages = this.beverages.filter(b => b !== beverage);
+          if (this.selectedBeverage === beverage) { this.selectedBeverage = null; }
+        });
+  }
+
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedBeverage.id]);
   }
