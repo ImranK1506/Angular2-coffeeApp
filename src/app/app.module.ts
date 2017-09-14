@@ -14,6 +14,7 @@ import { AppComponent }            from './app.component';
 import { BeverageDetailComponent } from './beverages/beverage-detail/beverage-detail.component';
 import { BeveragesComponent }      from './beverages/beverage/beverage.component';
 import { BeverageService }         from './beverages/shared/beverage.service';
+import { BeverageSearchComponent } from './beverages/beverage-search/beverage-search.component';
 import { DashboardComponent }      from './beverages/dashboard/dashboard.component';
 
 @NgModule({
@@ -28,6 +29,7 @@ import { DashboardComponent }      from './beverages/dashboard/dashboard.compone
     AppComponent,
     BeverageDetailComponent,
     BeveragesComponent,
+    BeverageSearchComponent,
     DashboardComponent
   ],
   providers: [BeverageService],
