@@ -29,7 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## View
 
-<a href ="https://coffee-app-angular4.herokuapp.com/dashboard">Coffee App</a>
+<a href ="https://coffee-app-angular4.herokuapp.com/dashboard" target="_blank">Coffee App</a>
 
 ## Author
 
