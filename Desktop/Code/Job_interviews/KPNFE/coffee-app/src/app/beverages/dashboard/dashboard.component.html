@@ -1,0 +1,9 @@
+<h3>Top picks!</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let beverage of beverages" [routerLink]="['/detail', beverage.id]" class="col-1-4">
+    <div class="module beverage">
+      <h4>{{beverage.name}}</h4>
+    </div>
+  </a>
+</div>
+<beverage-search></beverage-search>
