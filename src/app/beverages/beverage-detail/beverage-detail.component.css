@@ -27,3 +27,6 @@ button:disabled {
   color: #ccc; 
   cursor: auto;
 }
+h2 {
+  color: #eee;
+}
