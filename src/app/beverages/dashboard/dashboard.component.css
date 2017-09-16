@@ -35,7 +35,7 @@ h4 {
   max-height: 120px;
   min-width: 120px;
   background-color: #607D8B;
-  border-radius: 2px;
+  border-radius: 50em;
 }
 .module:hover {
   background-color: #EEE;
