@@ -12,10 +12,6 @@ h2, h3 {
 body {
   margin: 0 auto;
   width: 850px;
-  background-image: url("./assets/coffeback.png");
-  background-size: 100% 220%;
-  background-position-x: 50%;
-  background-repeat: no-repeat;
 }
 body, input[text], button {
   color: #888;
